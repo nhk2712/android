@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@media all and (max-width:768px) {
+    #container {
+        width: 90%;
+    }
+}
+
+@media all and (min-width:769px){
+    #container {
+        width: 50%;
+    }
+}
+
+body{
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+    font-size:50px;
+    color: lightgray;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+#container{
+    height:100%;
+    border-radius:7px;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%;
+}
+
+#easy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+}
+
+#norm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    visibility: hidden;
+}
+
+#hard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+    visibility: hidden;
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:absolute;
+    z-index: 0;
+}
+
+#wrapper{
+    display:flex;  
+    margin-top: 20px;
+}
+
+#wrapper-norm, #wrapper-hard{
+    display:flex;  
+}
+
+.block, .block-norm{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    margin: 5px;
+    transition: all 500ms;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.block-hard{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    margin: 2px;
+    transition: all 500ms;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@keyframes empha{
+    0%{background-color: lightgrey;}
+    50%{background-color: yellow;}
+    100%{background-color: lightgrey;}
+}
+
+@keyframes true{
+    0%{background-color: lightgrey;}
+    25%{background-color: green;}
+    50%{background-color: lightgrey;}
+    75%{background-color: green;}
+    100%{background-color: lightgrey;}
+}
+
+@keyframes false{
+    0%{background-color: lightgrey;}
+    25%{background-color: red;}
+    50%{background-color: lightgrey;}
+    75%{background-color: red;}
+    100%{background-color: lightgrey;}
+}
+
+@keyframes fadeout{
+    0%{opacity:1}
+    100%{opacity:0}
+}
+
+@keyframes fadein{
+    0%{opacity:0}
+    100%{opacity:1}
+}
+
+#start, #start-norm, #start-hard{
+    margin-top: 20px;
+    margin-right: 10px;
+    padding:10px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(4, 196, 4);
+    color: white;
+    font-size: 20px;   
+    outline: none;
+    border: none;
+    border-radius:10px;
+    width: 100px; 
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+#start:active{
+    background-color:green;
+}
+
+#start-norm:active{
+    background-color:green;
+}
+
+#start-hard:active{
+    background-color:green;
+}
+
+#quit, #quit-norm, #quit-hard{
+    margin-top: 20px;
+    margin-left: 10px;
+    padding:10px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: red;
+    color: white;
+    font-size: 20px;   
+    outline: none;
+    border: none;
+    border-radius:10px;
+    width: 100px; 
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+#quit:active{
+    background-color:rgb(175, 0, 0);
+}
+
+#quit-norm:active{
+    background-color:rgb(175, 0, 0);
+}
+
+#quit-hard:active{
+    background-color:rgb(175, 0, 0);
+}
+
+#noti, #noti-norm, #noti-hard{
+    margin-top: 20px;
+    font-size:50px;
+    font-weight: bold;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    text-align: center;
+}
+
+#how, #how-norm{
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:20px;
+    text-align: center;
+}
+
+#control{
+    display: flex;
+}
+
+.dif{
+    width: 100px;
+    padding: 10px;
+    outline:none;
+    border: none;
+    border-radius:10px;
+    cursor: pointer;
+    margin:10px;
+    font-size: 20px;
+    color: white;
+    transition: all 0.5s;
+}
+
+#to-easy{
+    background-color:rgb(2, 202, 2);
+}
+
+#to-easy:hover{
+    background-color: green;
+}
+
+#to-norm{
+    background-color:rgb(252, 192, 80);
+}
+
+#to-norm:hover{
+    background-color:rgb(194, 126, 0);
+}
+
+#to-hard{
+    background-color:rgb(255, 71, 71);
+}
+
+#to-hard:hover{
+    background-color:rgb(190, 0, 0);
+}
+
+#size{
+    outline:none;
+    border:none;
+    border-radius:10px;
+    width: 70%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    position: fixed;
+    top: 20%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}

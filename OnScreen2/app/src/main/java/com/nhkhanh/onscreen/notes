@@ -1,0 +1,17 @@
+    Send notification:
+
+    private void sendOnChannel1()  {
+        String title = "On Screen";
+        String message = "You have turned your screen on!";
+
+        Notification notification = new NotificationCompat.Builder(this, NotificationApp.CHANNEL_1_ID)
+                .setSmallIcon(R.mipmap.onscreen)
+                .setContentTitle(title)
+                .setContentText(message)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                .build();
+
+        int notificationId = 1;
+        this.notificationManagerCompat.notify(notificationId, notification);
+    }

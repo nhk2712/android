@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>withtab.dart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #6a8759;}
+.s2 { color: #cc7832;}
+.s3 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+withtab.dart</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">'package:flutter/material.dart'</span><span class="s2">;</span>
+
+<span class="s2">void </span><span class="s0">main(){</span>
+  <span class="s0">runApp(MaterialApp(</span>
+    <span class="s0">home: MyApp()</span><span class="s2">,</span>
+  <span class="s0">))</span><span class="s2">;</span>
+<span class="s0">}</span>
+
+<span class="s2">class </span><span class="s0">MyApp </span><span class="s2">extends </span><span class="s0">StatelessWidget{</span>
+  <span class="s0">Widget build(BuildContext context){</span>
+    <span class="s2">return </span><span class="s0">DefaultTabController(</span>
+        <span class="s0">length: </span><span class="s3">2</span><span class="s2">,</span>
+        <span class="s0">child: Main()</span><span class="s2">,</span>
+    <span class="s0">)</span><span class="s2">;</span>
+  <span class="s0">}</span>
+<span class="s0">}</span>
+
+<span class="s2">class </span><span class="s0">Main </span><span class="s2">extends </span><span class="s0">StatelessWidget{</span>
+  <span class="s0">Widget build(BuildContext context){</span>
+    <span class="s2">return </span><span class="s0">Scaffold(</span>
+      <span class="s0">appBar: AppBar(</span>
+        <span class="s0">title: Text(</span><span class="s1">&quot;App with tabs&quot;</span><span class="s0">)</span><span class="s2">,</span>
+        <span class="s0">bottom: TabBar(</span>
+          <span class="s0">tabs: [</span>
+            <span class="s0">Tab(</span>
+              <span class="s0">icon: Icon(Icons.keyboard)</span><span class="s2">,</span>
+              <span class="s0">text: </span><span class="s1">&quot;Keyboard&quot;</span><span class="s2">,</span>
+            <span class="s0">)</span><span class="s2">,</span>
+            <span class="s0">Tab(</span>
+              <span class="s0">icon: Icon(Icons.mouse)</span><span class="s2">,</span>
+              <span class="s0">text: </span><span class="s1">&quot;Mouse&quot;</span><span class="s2">,</span>
+            <span class="s0">)</span><span class="s2">,</span>
+          <span class="s0">]</span><span class="s2">,</span>
+        <span class="s0">)</span><span class="s2">,</span>
+      <span class="s0">)</span><span class="s2">,</span>
+      <span class="s0">drawer: Drw()</span><span class="s2">,</span>
+      <span class="s0">body: TabBarView(</span>
+        <span class="s0">children: [</span>
+          <span class="s0">Tabone()</span><span class="s2">,</span>
+          <span class="s0">Tabtwo()</span><span class="s2">,</span>
+        <span class="s0">]</span><span class="s2">,</span>
+      <span class="s0">)</span><span class="s2">,</span>
+    <span class="s0">)</span><span class="s2">;</span>
+  <span class="s0">}</span>
+<span class="s0">}</span>
+
+<span class="s2">class </span><span class="s0">Tabone </span><span class="s2">extends </span><span class="s0">StatelessWidget{</span>
+  <span class="s0">Widget build(BuildContext context){</span>
+    <span class="s2">return </span><span class="s0">Center(</span>
+      <span class="s0">child:Text(</span><span class="s1">&quot;Keyboard&quot;</span><span class="s0">)</span><span class="s2">,</span>
+    <span class="s0">)</span><span class="s2">;</span>
+  <span class="s0">}</span>
+<span class="s0">}</span>
+
+<span class="s2">class </span><span class="s0">Tabtwo </span><span class="s2">extends </span><span class="s0">StatelessWidget{</span>
+  <span class="s0">Widget build(BuildContext context){</span>
+    <span class="s2">return </span><span class="s0">Center(</span>
+      <span class="s0">child:Text(</span><span class="s1">&quot;Mouse&quot;</span><span class="s0">)</span><span class="s2">,</span>
+    <span class="s0">)</span><span class="s2">;</span>
+  <span class="s0">}</span>
+<span class="s0">}</span>
+
+<span class="s2">class </span><span class="s0">Drw </span><span class="s2">extends </span><span class="s0">StatelessWidget{</span>
+  <span class="s0">Widget build(BuildContext context){</span>
+    <span class="s2">return </span><span class="s0">Drawer(</span>
+      <span class="s0">child: ListView(</span>
+        <span class="s0">children: [</span>
+          <span class="s0">ListTile(</span>
+            <span class="s0">leading: Icon(Icons.settings</span><span class="s2">, </span><span class="s0">color: Colors.blue</span><span class="s2">, </span><span class="s0">size: </span><span class="s3">30</span><span class="s2">,</span><span class="s0">)</span><span class="s2">,</span>
+            <span class="s0">title: Text(</span><span class="s1">&quot;Settings&quot;</span><span class="s2">, </span><span class="s0">style: TextStyle(fontSize: </span><span class="s3">20</span><span class="s0">)</span><span class="s2">,</span><span class="s0">)</span><span class="s2">,</span>
+            <span class="s0">contentPadding: EdgeInsets.fromLTRB(</span><span class="s3">20</span><span class="s2">, </span><span class="s3">10</span><span class="s2">, </span><span class="s3">0</span><span class="s2">, </span><span class="s3">10</span><span class="s0">)</span><span class="s2">,</span>
+            <span class="s0">onTap: (){</span>
+              <span class="s0">Navigator.pop(context)</span><span class="s2">;</span>
+              <span class="s0">Navigator.push(context</span><span class="s2">, </span><span class="s0">MaterialPageRoute(builder: (context)=&gt;Settings()))</span><span class="s2">;</span>
+              <span class="s0">}</span><span class="s2">,</span>
+          <span class="s0">)</span><span class="s2">,</span>
+        <span class="s0">]</span><span class="s2">,</span>
+      <span class="s0">)</span><span class="s2">,</span>
+    <span class="s0">)</span><span class="s2">;</span>
+  <span class="s0">}</span>
+<span class="s0">}</span>
+
+<span class="s2">class </span><span class="s0">Settings </span><span class="s2">extends </span><span class="s0">StatelessWidget{</span>
+  <span class="s0">Widget build(BuildContext context){</span>
+    <span class="s2">return </span><span class="s0">Scaffold(</span>
+      <span class="s0">appBar: AppBar(</span>
+        <span class="s0">leading: IconButton(icon: Icon(Icons.chevron_left)</span><span class="s2">, </span><span class="s0">onPressed: (){Navigator.pop(context)</span><span class="s2">;</span><span class="s0">}</span><span class="s2">,</span><span class="s0">)</span><span class="s2">,</span>
+        <span class="s0">title: Text(</span><span class="s1">&quot;Settings&quot;</span><span class="s0">)</span><span class="s2">,</span>
+      <span class="s0">)</span><span class="s2">,</span>
+    <span class="s0">)</span><span class="s2">;</span>
+  <span class="s0">}</span>
+<span class="s0">}</span></pre>
+</body>
+</html>
